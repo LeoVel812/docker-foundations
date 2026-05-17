@@ -1,0 +1,11 @@
+services:
+  web-app:
+    image: nginx
+    volumes:
+      - ./data:/usr/share/nginx/html
+  util:
+    image: vinsdocker/util
+    depends_on:
+      - web-app
+    command: "curl http://web-app"
+
