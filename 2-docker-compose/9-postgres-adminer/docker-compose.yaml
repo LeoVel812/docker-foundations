@@ -1,0 +1,13 @@
+services:
+  postgres-db:
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lv_db
+    volumes:
+      - ./postgres-data:/docker-entrypoint-initdb.d
+  adminer:
+    image: adminer
+    ports:
+      - 8085:8080

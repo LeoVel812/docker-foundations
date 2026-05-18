@@ -8,3 +8,7 @@
 * Check mongo-express logs to see credentials
 * Setup Volume mapping to store container data on host machine
 * For custom scripts (i.e. DB population) create js file and modify volume mapping path
+
+## postgres - adminer
+* setup init sql file to populate DB
+* credentials host:serviceNameOfDB
