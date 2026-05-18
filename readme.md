@@ -5,5 +5,6 @@
 * 2-docker-compose: playing with .yaml files to create services
 
 ## mongo - mongo-express
-Check mongo-express logs to see credentials
-Setup Volume mapping to store container data on host machine
+* Check mongo-express logs to see credentials
+* Setup Volume mapping to store container data on host machine
+* For custom scripts (i.e. DB population) create js file and modify volume mapping path
