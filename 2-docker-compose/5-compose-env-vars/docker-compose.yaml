@@ -1,0 +1,7 @@
+services:
+  web-app:
+  # ${EXPECTED_ENV_VAR} will be replaced with the value of EXPECTED_ENV_VAR from the .env file
+  # If not found, -default value will be used
+    image: nginx:${EXPECTED_ENV_VAR:-latest}
+    ports:
+      - "80:80"
