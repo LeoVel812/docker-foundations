@@ -1,0 +1,18 @@
+services:
+  mongo-app:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+  mongo-exp:
+    image: mongo-express
+    restart: always
+    depends_on:
+      - mongo-app
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      # mongo-exp will connect to mongo-app using the service name as the hostname
+      ME_CONFIG_MONGODB_SERVER: mongo-app
