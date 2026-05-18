@@ -4,6 +4,9 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
+      # to persist container data on host machine, we can use volumes
+    volumes:
+      - ./mongo-data:/data/db
   mongo-exp:
     image: mongo-express
     restart: always
