@@ -1,0 +1,33 @@
+[
+  {
+    "httpRequest": {
+      "path": "/some/.*",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": { "message": "Say Hello to MockServer! regex matched" }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/query",
+      "queryStringParameters": {
+        "q": ["docker"]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": { "message": "did you type 'docker'?" }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/error"
+    },
+    "httpResponse": {
+      "statusCode": 500,
+      "body": { "message": "An error occurred!" }
+    }
+  }
+]
